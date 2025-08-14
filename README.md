@@ -4,7 +4,7 @@ BookSeek.AI – AI-Powered Study Assistant
 
 BookSeek.AI is an interactive Streamlit-based application that helps users learn more effectively by allowing them to upload study materials (PDFs, notes, etc.) and query them using AI-powered question answering. The app uses Retrieval-Augmented Generation (RAG) to search across uploaded documents and generate context-aware answers.
 
-Features
+# Features
 
 📚 PDF Upload & Processing – Upload multiple PDF files to build a searchable knowledge base.
 
@@ -20,7 +20,7 @@ Features
 
 💬 Conversation History – Keeps track of multiple conversations and their Q&A pairs.
 
-Tech Stack
+# Tech Stack
 
 Frontend/UI: Streamlit
 
@@ -32,36 +32,36 @@ Document Processing: LangChain document loaders & splitters
 
 LLM Provider: OpenRouter API
 
-Installation & Setup
+# Installation & Setup
 
-Clone the repository
+# Clone the repository
 
 git clone https://github.com/yourusername/bookseek-ai.git
 cd bookseek-ai
 
 
-Create a virtual environment
+# Create a virtual environment
 
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
 
 
-Install dependencies
+# Install dependencies
 
 pip install -r requirements.txt
 
 
-Set up environment variables
+# Set up environment variables
 Create a .env file in the project root:
 
 OPENROUTER_API_KEY=your_openrouter_api_key_here
 
 
-Run the app
+# Run the app
 
 streamlit run app.py
 
-Usage
+# Usage
 
 Upload your study materials in PDF format from the sidebar.
 
@@ -70,3 +70,14 @@ Wait for the documents to be processed and stored in the vector database.
 Ask questions in the chat interface to receive AI-powered answers.
 
 Optionally, expand the "📖 View Sources" section to see references from your documents.
+
+
+# Notes
+
+The app will attempt to load an existing combined vector database on startup.
+
+If you upload new files, the system will reprocess and update the vector database.
+
+Ensure that your OPENROUTER_API_KEY is valid and active before running queries.
+
+
